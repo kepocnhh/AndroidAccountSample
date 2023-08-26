@@ -1,5 +1,5 @@
 <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
-    android:accountType="com.company.demo.account.DEMOACCOUNT"
+    android:accountType="@string/account_type"
     android:icon="@drawable/ic_launcher"
     android:smallIcon="@drawable/ic_launcher"
-    android:label="foobar account"/>
+    android:label="@string/account_authenticator_name"/>

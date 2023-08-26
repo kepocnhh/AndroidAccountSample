@@ -1,14 +1,20 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="internalOnly">
     <application
         android:theme="@style/App.Theme"
         android:icon="@drawable/ic_launcher"
         android:label="${appName}_${buildType}">
-        <activity android:name=".MainActivity"
-            android:exported="true">
+        <activity android:name=".AddAccountActivity"
+            android:exported="true"/>
+
+        <service android:name=".AuthenticatorService"
+            android:exported="false">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.accounts.AccountAuthenticator"/>
             </intent-filter>
-        </activity>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
+        </service>
     </application>
 </manifest>
