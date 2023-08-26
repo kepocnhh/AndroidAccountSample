@@ -7,11 +7,8 @@ import android.accounts.AccountManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 
 internal class FooAccountAuthenticator(private val context: Context) : AbstractAccountAuthenticator(context) {
-    private val TAG = "[FAA|${hashCode()}]"
-
     override fun editProperties(
         response: AccountAuthenticatorResponse?,
         accountType: String?
